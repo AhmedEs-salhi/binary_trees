@@ -14,7 +14,9 @@ binary_tree_t *binary_tree_sibling(const binary_tree_t *node)
 	binary_tree_t *nodeParent;
 
 	nodeParent = node->parent;
-	if (node == NULL || nodeParent == NULL)
+	if (!node || !nodeParent)
+		return (NULL);
+	if (nodeParent->right == NULL || nodeParent->left == NULL)
 		return (NULL);
 	if (node->n == nodeParent->right->n)
 		return (nodeParent->left);
