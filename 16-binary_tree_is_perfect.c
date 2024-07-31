@@ -1,25 +1,6 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_leave - check a node if it's a leave node or not
- *
- * @tree: the node to check
- *
- * Return: 1 if it's a leave not or 0 if it's not or it failed
- *
- */
-
-size_t binary_tree_is_leave(const binary_tree_t *tree)
-{
-	if (!tree)
-		return (0);
-	if (tree->right == NULL && tree->left == NULL)
-		return (1);
-	else
-		return (0);
-}
-
-/**
  * binary_tree_is_perfect - checks if a binary tree is perfect or no
  *
  * @root: the root of the binary tree
