@@ -40,3 +40,19 @@ int is_complete(const binary_tree_t *tree, size_t index, size_t size)
 	return (is_complete(tree->left, 2 * index + 1, size) &&
 			is_complete(tree->right, 2 * index + 2, size));
 }
+
+/**
+ * binary_tree_size - calculates the size of a binary tree
+ *
+ * @tree: the root of the binary tree
+ *
+ * Return: the size of the binary tree
+ *
+ */
+
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return (0);
+	return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
+}
