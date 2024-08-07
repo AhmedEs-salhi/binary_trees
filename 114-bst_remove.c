@@ -31,7 +31,7 @@ bst_t *bst_minimum(bst_t *root)
 
 bst_t *bst_remove(bst_t *root, int value)
 {
-	bst_t *temp;
+	bst_t *temp = NULL;
 
 	if (!root)
 		return (NULL);
