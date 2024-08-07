@@ -12,13 +12,13 @@
 
 bst_t *array_to_bst(int *array, size_t size)
 {
-	bst_t *root, *node = NULL;
+	bst_t *root, *node;
 	size_t i;
 
 	root = binary_tree_node(NULL, array[0]);
 	node = root;
 
-	if (!root || !node)
+	if (!root || !node || !array || size == 0)
 		return (NULL);
 
 	for (i = 1; i < size; i++)
