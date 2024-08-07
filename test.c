@@ -3,17 +3,21 @@
 #include <unistd.h>
 #include <limits.h>
 
-int logic(int a, int b)
+void logic (int a)
 {
-	return (a == b);
+	int i;
+
+	i += a;
+	printf("%d\n", i);
 }
 
 int main()
 {
-	int result;
+	int result = 2;
 
-	printf("%d\n", INT_MIN);
-	printf("%d\n", INT_MAX);
+	logic(result);
+	logic(result);
+	logic(result);
 
 	return (0);
 }

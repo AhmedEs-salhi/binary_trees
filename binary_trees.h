@@ -55,4 +55,8 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *root);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *root);
 int binary_tree_is_bst(binary_tree_t *tree);
 
+typedef struct binary_tree_s bst_t;
+
+bst_t *bst_insert(bst_t **tree, int value);
+
 #endif
